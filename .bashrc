@@ -117,20 +117,26 @@ if ! shopt -oq posix; then
 fi
 
 #henglu's settings
-
 #path
+export RASPA_DIR=${HOME}/Research/simulations/
+export raspa_lib=${HOME}/Research/simulations/share/raspa/
+export raspa_cif=${HOME}/Research/simulations/share/raspa/structures/cif/
+export raspa_ff=${HOME}/Research/simulations/share/raspa/forcefield/
+export raspa_example=${HOME}/Research/RASPA2/examples/
+export t2e_original=${HOME}/Research/simulations/share/raspa/structures/full_set_T2E/
 export t2e=${HOME}/Dropbox/t2e_db/full_set_T2E/
 
-#vesta & mercury & zeopp
-export PATH="/home/henglu/Documents/VESTA-x86_64/:$PATH"
-export PATH="/home/henglu/Documents/Mercury_3.9/bin/:$PATH"
-export PATH="/home/henglu/Documents/zeo++-0.3/:$PATH"
+#raspa & vesta & mercury & zeopp
+export PATH="/home/henglu/Research/simulations/bin/:$PATH"
+export PATH="/home/henglu/Research/VESTA-x86_64/:$PATH"
+export PATH="/home/henglu/Research/Mercury_3.9/bin/:$PATH"
+export PATH="/home/henglu/Research/zeo++-0.3/:$PATH"
 
 #alias
 export PATH="/home/henglu/Dropbox/alias/:$PATH"
 export PATH="/home/henglu/Dropbox/bash/:$PATH"
-alias zeopp="/home/henglu/Documents/zeo++-0.3/network"
-alias vesta="/home/henglu/Documents/VESTA-x86_64/VESTA"
+alias zeopp="/home/henglu/Research/zeo++-0.3/network"
+alias vesta="/home/henglu/Research/VESTA-x86_64/VESTA"
 #alias scitas_home="hxu@fidis.epfl.ch:/home/hxu"
 
 #vi
