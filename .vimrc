@@ -15,18 +15,17 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tomasr/molokai'			" for color
 Plugin 'Yggdroot/indentLine'
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips' 		" Track the engine.
+Plugin 'honza/vim-snippets' 	" Snippets are separated from the engine. Add this if you want them:
+Plugin 'ervandew/supertab' 		" YCM and Ultisnips
+Plugin 'vim-scripts/Align'
+Plugin 'tpope/vim-fugitive' 	" git
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()            
+filetype plugin indent on   
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 
-" Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just
 " :PluginUpdate
@@ -46,10 +45,11 @@ let g:tex_flavor='latex'
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 set iskeyword+=:
-autocmd BufNewFile,BufRead *.tex set spell " 自动拼写检查
+" autocmd BufNewFile,BufRead *.tex set spell " 自动拼写检查
+let g:tex_indent_items=0
 
 " TagBar
-let g:tagbar_width=35
+let g:tagbar_width=25
 let g:tagbar_autofocus=1
 let g:tagbar_left = 1
 " nmap <F3> :TagbarToggle<CR>
@@ -70,7 +70,6 @@ let g:Powerline_symbols = 'fancy'
 " IndentLine
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
-" if you use Vundle, load plugins:
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -85,12 +84,16 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-
 " Put your non-Plugin stuff after this line
 
-syntax on " 代码高亮
-set number " 显示行号
-set ts=4 " 设置tab键为四个空格
+syntax on 			" 代码高亮
+set number 			" 显示行号
+set ts=4 			" 设置tab键为四个空格
 set showmatch 		" match braket
 set hlsearch        " 高亮搜索项"
-" set spell 			" 拼写检查
+set ignorecase 		" 忽略大小写
+" set spell 		" 拼写检查
+" set wrap
+" set ruler
+" set incsearch
+set showmode
