@@ -20,25 +20,23 @@ sudo apt install vim
 # Vundle
 mkdir bundle ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/
-# deal with .vimrc
 # YCM
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev python3-dev
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+./install.py --clang-completer # add the path for cpp.conf
 # TagBar
 sudo apt install ctags
 
 sudo apt install okular
 sudo apt install chromium-browser
-sudo apt install texmaker
 
 #zotero & tex
 #zotero
-sudo add-apt-repository ppa:smathot/cogscinl
+udo add-apt-repository ppa:smathot/cogscinl
 sudo apt update
 sudo apt install zotero-standalone 
-#tex
+#tex 可以从安装脚本开始安装
 sudo apt install perl-tk 
 sudo mount -o loop texlive*.iso /mnt
 cd /mnt

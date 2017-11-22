@@ -1,11 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
@@ -13,13 +10,13 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'tomasr/molokai'			" for color
 Plugin 'Yggdroot/indentLine'
 Plugin 'SirVer/ultisnips' 		" Track the engine.
 Plugin 'honza/vim-snippets' 	" Snippets are separated from the engine. Add this if you want them:
 Plugin 'ervandew/supertab' 		" YCM and Ultisnips
 Plugin 'vim-scripts/Align'
 Plugin 'tpope/vim-fugitive' 	" git
+Plugin 'tmhedberg/SimpylFold'
 
 call vundle#end()            
 filetype plugin indent on   
@@ -32,7 +29,20 @@ filetype plugin indent on
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-" latex suite
+" YCM for cpp
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Latex-suite
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
@@ -45,7 +55,6 @@ let g:tex_flavor='latex'
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 set iskeyword+=:
-" autocmd BufNewFile,BufRead *.tex set spell " 自动拼写检查
 let g:tex_indent_items=0
 
 " TagBar
@@ -63,6 +72,16 @@ let NERDTreeShowBookmarks=1
 " let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 "窗口大小"
 let NERDTreeWinSize=25
+" open a NERDTree automatically when vim starts up
+" autocmd vimenter * NERDTree
+" open a NERDTree automatically when vim starts up if no files were specified
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" open NERDTree automatically when vim starts up on opening a directory
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"close vim if the only window left open is a NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Vim powerline
 let g:Powerline_symbols = 'fancy'
@@ -71,29 +90,27 @@ let g:Powerline_symbols = 'fancy'
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
 
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" SimpleFold
+let g:SimpylFold_docstring_preview=1
 
 " Put your non-Plugin stuff after this line
 
 syntax on 			" 代码高亮
+set encoding=utf-8 	" 编码为utf8
 set number 			" 显示行号
 set ts=4 			" 设置tab键为四个空格
 set showmatch 		" match braket
-set hlsearch        " 高亮搜索项"
+set hlsearch        " 高亮搜索项,取消高亮 :nohl
 set ignorecase 		" 忽略大小写
-" set spell 		" 拼写检查
-" set wrap
-" set ruler
-" set incsearch
 set showmode
+set splitbelow
+set splitright
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
+set foldmethod=indent 	" Enable folding      " set foldmethod=syntax
+set foldlevel=99
+nnoremap <space> za		" Enable folding with the spacebar
+au BufWinLeave * silent mkview
+au BufWinEnter * silent loadview
