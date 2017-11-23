@@ -123,8 +123,11 @@ export raspa_lib=${HOME}/Research/simulations/share/raspa/
 export raspa_cif=${HOME}/Research/simulations/share/raspa/structures/cif/
 export raspa_ff=${HOME}/Research/simulations/share/raspa/forcefield/
 export raspa_example=${HOME}/Research/RASPA2/examples/
+
 export t2e_original=${HOME}/Research/simulations/share/raspa/structures/full_set_T2E/
 export t2e=${HOME}/Dropbox/t2e_db/full_set_T2E/
+
+export latex=${HOME}/Documents/LaTeX/
 
 #raspa & vesta & mercury & zeopp
 export PATH="/home/henglu/Research/simulations/bin/:$PATH"

@@ -99,6 +99,7 @@ syntax on 			" 代码高亮
 set encoding=utf-8 	" 编码为utf8
 set number 			" 显示行号
 set ts=4 			" 设置tab键为四个空格
+set sw=4 			" shift width
 set showmatch 		" match braket
 set hlsearch        " 高亮搜索项,取消高亮 :nohl
 set ignorecase 		" 忽略大小写
