@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
@@ -15,7 +15,7 @@ Plugin 'SirVer/ultisnips' 		" Track the engine.
 Plugin 'honza/vim-snippets' 	" Snippets are separated from the engine. Add this if you want them:
 Plugin 'ervandew/supertab' 		" YCM and Ultisnips
 Plugin 'vim-scripts/Align'
-Plugin 'tpope/vim-fugitive' 	" git
+" Plugin 'tpope/vim-fugitive' 	" git
 Plugin 'tmhedberg/SimpylFold'
 
 call vundle#end()            
@@ -58,9 +58,9 @@ set iskeyword+=:
 let g:tex_indent_items=0
 
 " TagBar
-let g:tagbar_width=25
-let g:tagbar_autofocus=1
-let g:tagbar_left = 1
+" let g:tagbar_width=25
+" let g:tagbar_autofocus=1
+" let g:tagbar_left = 1
 " nmap <F3> :TagbarToggle<CR>
 
 " NERD Tree
@@ -72,16 +72,6 @@ let NERDTreeShowBookmarks=1
 " let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 "窗口大小"
 let NERDTreeWinSize=25
-" open a NERDTree automatically when vim starts up
-" autocmd vimenter * NERDTree
-" open a NERDTree automatically when vim starts up if no files were specified
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" open NERDTree automatically when vim starts up on opening a directory
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-"close vim if the only window left open is a NERDTree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Vim powerline
 let g:Powerline_symbols = 'fancy'
