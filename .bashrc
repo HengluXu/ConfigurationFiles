@@ -138,6 +138,7 @@ export PATH="/home/henglu/Research/zeo++-0.3/:$PATH"
 #alias
 export PATH="/home/henglu/Dropbox/alias/:$PATH"
 export PATH="/home/henglu/Dropbox/bash/:$PATH"
+export PATH="/home/henglu/Dropbox/python/:$PATH"
 alias zeopp="/home/henglu/Research/zeo++-0.3/network"
 alias vesta="/home/henglu/Research/VESTA-x86_64/VESTA"
 #alias scitas_home="hxu@fidis.epfl.ch:/home/hxu"
@@ -145,3 +146,5 @@ alias vesta="/home/henglu/Research/VESTA-x86_64/VESTA"
 #vi
 set -o vi
 
+# added by Anaconda3 installer
+export PATH="/home/henglu/Research/anaconda3/bin:$PATH"
