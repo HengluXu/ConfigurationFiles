@@ -117,6 +117,12 @@ if ! shopt -oq posix; then
 fi
 
 #henglu's settings
+
+# ssh log in, for source .bashrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
 #path
 export RASPA_DIR=${HOME}/Research/simulations/
 export raspa_lib=${HOME}/Research/simulations/share/raspa/
@@ -134,17 +140,14 @@ export PATH="/home/henglu/Research/simulations/bin/:$PATH"
 export PATH="/home/henglu/Research/VESTA-x86_64/:$PATH"
 export PATH="/home/henglu/Research/Mercury_3.9/bin/:$PATH"
 export PATH="/home/henglu/Research/zeo++-0.3/:$PATH"
+export PATH="/home/henglu/Research/anaconda3/bin:$PATH"
 
 #alias
 export PATH="/home/henglu/Dropbox/alias/:$PATH"
-export PATH="/home/henglu/Dropbox/bash/:$PATH"
-export PATH="/home/henglu/Dropbox/python/:$PATH"
+export PATH="/home/henglu/Dropbox/scripts/:$PATH"
 alias zeopp="/home/henglu/Research/zeo++-0.3/network"
 alias vesta="/home/henglu/Research/VESTA-x86_64/VESTA"
-#alias scitas_home="hxu@fidis.epfl.ch:/home/hxu"
 
 #vi
 set -o vi
 
-# added by Anaconda3 installer
-export PATH="/home/henglu/Research/anaconda3/bin:$PATH"

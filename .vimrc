@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
 Plugin 'Valloric/YouCompleteMe'
 " Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
 Plugin 'SirVer/ultisnips' 		" Track the engine.
@@ -65,13 +65,13 @@ let g:tex_indent_items=0
 
 " NERD Tree
 " nmap <F2> :NERDTreeToggle<cr>
-let NERDTreeChDirMode=1
-"显示书签"
-let NERDTreeShowBookmarks=1
-"设置忽略文件类型"
+" let NERDTreeChDirMode=1
+" 显示书签"
+" let NERDTreeShowBookmarks=1
+" 设置忽略文件类型"
 " let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-"窗口大小"
-let NERDTreeWinSize=25
+" 窗口大小"
+" let NERDTreeWinSize=25
 
 " Vim powerline
 let g:Powerline_symbols = 'fancy'
@@ -88,18 +88,17 @@ let g:SimpylFold_docstring_preview=1
 syntax on 			" 代码高亮
 set encoding=utf-8 	" 编码为utf8
 set number 			" 显示行号
+set ru  			" 显示标尺
 set ts=4 			" 设置tab键为四个空格
 set sw=4 			" shift width
 set showmatch 		" match braket
 set hlsearch        " 高亮搜索项,取消高亮 :nohl
+nmap <F2> :nohl<cr>
 set ignorecase 		" 忽略大小写
 set showmode
 set splitbelow
 set splitright
-" nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
-" nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
+
 set foldmethod=indent 	" Enable folding      " set foldmethod=syntax
 set foldlevel=99
 nnoremap <space> za		" Enable folding with the spacebar
