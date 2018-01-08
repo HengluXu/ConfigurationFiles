@@ -9,7 +9,7 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'Valloric/YouCompleteMe'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/vim-powerline'
+" Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
 Plugin 'SirVer/ultisnips' 		" Track the engine.
 Plugin 'honza/vim-snippets' 	" Snippets are separated from the engine. Add this if you want them:

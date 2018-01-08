@@ -118,11 +118,6 @@ fi
 
 #henglu's settings
 
-# ssh log in, for source .bashrc
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
-
 #path
 export RASPA_DIR=${HOME}/Research/simulations/
 export raspa_lib=${HOME}/Research/simulations/share/raspa/
