@@ -142,6 +142,9 @@ export PATH="/home/henglu/Dropbox/alias/:$PATH"
 export PATH="/home/henglu/Dropbox/scripts/:$PATH"
 alias zeopp="/home/henglu/Research/zeo++-0.3/network"
 alias vesta="/home/henglu/Research/VESTA-x86_64/VESTA"
+alias c="clear"
+alias aiida="source /home/henglu/aiidapy/bin/activate" 	# switch to aiida
+alias hm="source /home/henglu/.bashrc" 					# switch from aiida to home
 
 # input
 set -o vi
