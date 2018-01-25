@@ -74,7 +74,7 @@ let g:tex_indent_items=0
 " let NERDTreeWinSize=25
 
 " Vim powerline
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " IndentLine
 let g:indentLine_char='┆'
