@@ -1,0 +1,33 @@
+Plugin 'VundleVim/Vundle.vim'
+
+"common
+Plugin 'scrooloose/nerdtree'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Yggdroot/indentLine'
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+
+"Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'Lokaltog/vim-powerline'
+"Plugin 'MatchTag'
+"Plugin 'delimitMate.vim'
+"Plugin 'Mark--Karkat'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'ybian/smartim'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+
+"python
+Plugin 'pydoc.vim'
+Plugin 'heavenshell/vim-pydocstring'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-scripts/Pydiction'
+
+"Plugin 'vim-scripts/Align'
+"Plugin 'vim-latex/vim-latex'
+

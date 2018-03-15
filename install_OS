@@ -33,7 +33,7 @@ sudo apt install chromium-browser
 
 #zotero & tex
 #zotero
-udo add-apt-repository ppa:smathot/cogscinl
+sudo add-apt-repository ppa:smathot/cogscinl
 sudo apt update
 sudo apt install zotero-standalone 
 #tex 可以从安装脚本开始安装
